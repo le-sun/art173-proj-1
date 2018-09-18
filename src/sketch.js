@@ -23,6 +23,9 @@ class Key {
 }
 
 function preload() {
+  console.log('1')
+  loadSound('assets/reg-A.mp3')
+  console.log('hmm')
   for (let i = 0; i < keyNames.length; i++) {
     sounds.push(loadSound('assets/reg-' + keyNames[i] + '.mp3'));
   }
