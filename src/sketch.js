@@ -78,16 +78,16 @@ function draw() {
       currentSound.splice(i, 1);
     }
 
-    fill('black');
+    textSize(40);
     text(...currentSound);
-    currentSound[2] += random(20);
+    currentSound[2] += random(15);
     // playedSounds[i] = currentSound;
   }
 }
 
 function playSound(soundIndex, soundName) {
   let sound = sounds[soundIndex];
-  playedSounds.push([soundName, random(width), random(height)]);
+  playedSounds.push([soundName, random(width), random(100)]);
   console.log(sound);
   sound.play();
 }
