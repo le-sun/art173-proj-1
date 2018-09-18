@@ -15,10 +15,11 @@ class Key {
       ['left', left],
       ['z-index', zIndex]
     ]
+    this.soundIndex = soundIndex;
     let newKey = createDiv();
     this.styles.forEach((style) => {newKey.style(...style)})
 
-    newKey.mouseClicked(playSound(soundIndex));
+    newKey.mouseClicked(() => {playSound(this.soundIndex)});
   }
 }
 
