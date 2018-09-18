@@ -1,7 +1,8 @@
 var numWhiteKeys = 7;
 var numBlackKeys = 5;
 var keyLoc = 10;
-var keyNames = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+var naturalKeyNames = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
+var sharpKeyNames = ['A', 'C', 'D', 'F', 'G']
 var sounds = [];
 var keys = [];
 
@@ -26,8 +27,9 @@ class Key {
 function preload() {
   console.log('1')
   loadSound('assets/reg-A.mp3')
+  loadSound(String('assets/reg-' + naturalKeyNames[0] + '.mp3'));
   console.log('hmm')
-  for (let i = 0; i < keyNames.length; i++) {
+  for (let i = 0; i < naturalKeyNames.length; i++) {
     // sounds.push(loadSound('assets/reg-' + keyNames[i] + '.mp3'));
   }
 }
@@ -73,6 +75,6 @@ function draw() {
   }
 }
 
-function playSound(soundIndex) {
+function playSound() {
   console.log(soundIndex)
 }
