@@ -36,12 +36,12 @@ function preload() {
 
 function setup() {
   createCanvas(1024, 720);
-  
+
   let leftPos = 0;
   for (let i = 0; i < sounds.length; i++) {
     new Key('200px', '50px', '209px', String(19 + (leftPos*51)) + 'px', 1, i);
 
-    if (!(i == 2 || i > numBlackKeys)) {
+    if (i != 4) {
       i += 1;
       new Key('100px', '31px', '209px', String(53 + (leftPos*51)) + 'px', 2, i);
     }
