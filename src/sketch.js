@@ -30,13 +30,13 @@ function preload() {
   loadSound(String('assets/reg-' + naturalKeyNames[0] + '.mp3'));
   console.log('hmm')
   for (let i = 0; i < naturalKeyNames.length; i++) {
-    sounds.push(loadSound(String('assets/reg-' + keyNames[i] + '.mp3')));
+    sounds.push(loadSound(String('assets/reg-' + naturalKeyNames[i] + '.mp3')));
   }
 }
 
 function setup() {
   createCanvas(1024, 720);
-  for (let i = 0; i < numWhiteKeys) {
+  for (let i = 0; i < numWhiteKeys; i++) {
     new Key('200px', '50px', '209px', String(19 + (i*51)) + 'px', 1, i);
 
     if (!(i == 2 || i > numBlackKeys)) {
