@@ -77,8 +77,11 @@ function draw() {
     if (currentSound[2] > height) {
       currentSound.splice(i, 1);
     }
+    
+    fill('black');
     text(...currentSound);
     currentSound[2] += random(20);
+    playedSounds[i] = currentSound;
   }
 }
 
