@@ -72,6 +72,6 @@ function draw() {
   }
 
   function playSound(soundIndex) {
-
+    console.log(soundIndex)
   }
 }
