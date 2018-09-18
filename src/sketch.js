@@ -28,7 +28,7 @@ function preload() {
     sounds.push(loadSound(String('assets/reg-' + naturalKeyNames[i] + '.mp3')));
 
     if (i != 2 && i != 6) {
-      sounds.push(loadSound(String('assets/reg-' + naturalKeyNames[i] + 'b.mp3')));
+      sounds.push(loadSound(String('assets/reg-' + naturalKeyNames[i] +'#' + '.mp3')));
     }
   }
   console.log(sounds)
