@@ -56,6 +56,15 @@ function setup() {
     }
     leftPos += 1;
   }
+
+  for (let i = 0; i < playedSounds; i++) {
+    let currentSound = playedSounds[i];
+    if (currentSound[2] > height) {
+      currentSound.splice(i, 1);
+    }
+    text(...currentSound);
+    currentSound[i][2] += random(20);
+  }
 }
 
 function draw() {
@@ -75,6 +84,7 @@ function draw() {
 
 function playSound(soundIndex, soundName) {
   let sound = sounds[soundIndex];
+  playedSounds.push([soundName, random(width), random(height)]);
   console.log(sound);
   sound.play();
 }
