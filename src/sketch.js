@@ -39,11 +39,11 @@ function setup() {
 
   let leftPos = 0;
   for (let i = 0; i < sounds.length; i++) {
-    new Key('200px', '50px', '209px', String(19 + (leftPos*51)) + 'px', 1, i);
+    new Key('200px', '50px', '200px', String(10 + (leftPos*51)) + 'px', 1, i);
 
     if (i != 4) {
       i += 1;
-      new Key('100px', '31px', '209px', String(53 + (leftPos*51)) + 'px', 2, i);
+      new Key('100px', '31px', '200px', String(45 + (leftPos*51)) + 'px', 2, i);
     }
     leftPos += 1;
   }
