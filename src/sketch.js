@@ -40,9 +40,10 @@ function setup() {
     new Key('200px', '50px', '209px', String(19 + (i*51)) + 'px', 1, i);
 
     if (!(i == 2 || i > numBlackKeys)) {
-      i += 1;
+      i = i + 1;
       new Key('100px', '31px', '209px', String(53 + (i*51)) + 'px', 2, i);
     }
+    console.log(i);
   }
 }
 
