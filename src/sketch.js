@@ -72,16 +72,16 @@ function draw() {
     }
   }
 
-  for (let i = 0; i < playedSounds; i++) {
+  for (let i = 0; i < playedSounds.length; i++) {
     let currentSound = playedSounds[i];
     if (currentSound[2] > height) {
       currentSound.splice(i, 1);
     }
-    
+
     fill('black');
     text(...currentSound);
     currentSound[2] += random(20);
-    playedSounds[i] = currentSound;
+    // playedSounds[i] = currentSound;
   }
 }
 
