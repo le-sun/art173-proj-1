@@ -5,7 +5,7 @@ const leftPosW = 335;
 const leftPosB = 370;
 const naturalKeyNames = ['C', 'D', 'E', 'F', 'G', 'A', 'B'];
 
-var sounds = [1, 2, 3, ,4 ,5, 6, 7, 8, 9, 1];
+var sounds = [];
 var playedSounds = [];
 var currentKeyIndex;
 var keys = [];
@@ -32,10 +32,10 @@ class Key {
 
 function preload() {
   for (let i = 0; i < naturalKeyNames.length; i++) {
-    // sounds.push(loadSound(String('assets/reg-' + naturalKeyNames[i] + '.mp3')));
+    sounds.push(loadSound(String('assets/reg-' + naturalKeyNames[i] + '.mp3')));
 
     if (i != 2 && i != 6) {
-      // sounds.push(loadSound(String('assets/reg-' + naturalKeyNames[i] + 'b' + '.mp3')));
+      sounds.push(loadSound(String('assets/reg-' + naturalKeyNames[i] + 'b' + '.mp3')));
     }
   }
   console.log(sounds)
