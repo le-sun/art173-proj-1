@@ -80,9 +80,9 @@ function draw() {
     }
 
     textSize(40);
-    fill(random(255));
+    fill(random(255), random(255), random(255));
     text(...currentSound);
-    rotate(PI / 3.0);
+    rotate(HALF_PI);
     currentSound[2] += random(10);
   }
 }
