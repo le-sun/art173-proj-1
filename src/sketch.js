@@ -28,7 +28,12 @@ function preload() {
     sounds.push(loadSound(String('assets/reg-' + naturalKeyNames[i] + '.mp3')));
 
     if (i != 2 && i != 6) {
-      // sounds.push(loadSound(String('assets/reg-' + naturalKeyNames[i] + '#.mp3')));
+      try{
+        
+      sounds.push(loadSound(String('assets/reg-' + naturalKeyNames[i] + '#.mp3')));
+    } catch(err) {
+      
+    }
     }
   }
   console.log(sounds)
@@ -61,5 +66,6 @@ function draw() {
 }
 
 function playSound(soundIndex) {
-  sounds[soundIndex].play()
+  let sound = sounds[soundIndex];
+  sound.play();
 }
