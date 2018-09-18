@@ -61,5 +61,5 @@ function draw() {
 }
 
 function playSound(soundIndex) {
-  sounds[i].play()
+  sounds[soundIndex].play()
 }
