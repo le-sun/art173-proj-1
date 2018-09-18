@@ -26,7 +26,7 @@ class Key {
     let newKey = createDiv();
     this.styles.forEach((style) => {newKey.style(...style)})
 
-    newKey.mouseClicked(() => {playSound(this.soundIndex, this.soundName)});
+    newKey.mouseClicked(() => {playSound(this.soundIndex, this.name)});
   }
 }
 
@@ -71,14 +71,14 @@ function draw() {
       rect(leftPosB + (i*51), 500, 30, 100);
     }
   }
-  
+
   for (let i = 0; i < playedSounds; i++) {
     let currentSound = playedSounds[i];
     if (currentSound[2] > height) {
       currentSound.splice(i, 1);
     }
     text(...currentSound);
-    currentSound[i][2] += random(20);
+    currentSound[2] += random(20);
   }
 }
 
