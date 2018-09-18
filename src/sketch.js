@@ -30,19 +30,27 @@ function preload() {
   loadSound(String('assets/reg-' + naturalKeyNames[0] + '.mp3'));
   console.log('hmm')
   for (let i = 0; i < naturalKeyNames.length; i++) {
-    // sounds.push(loadSound('assets/reg-' + keyNames[i] + '.mp3'));
+    sounds.push(loadSound(String('assets/reg-' + keyNames[i] + '.mp3')));
   }
 }
 
 function setup() {
   createCanvas(1024, 720);
+  for (let i = 0; i < numWhiteKeys) {
+    new Key('200px', '50px', '209px', String(19 + (i*51)) + 'px', 1, i);
+
+    if (!(i == 2 || i > numBlackKeys)) {
+      new Key('100px', '31px', '209px', String(53 + (i*51)) + 'px', 2, i);
+    }
+  }
+
   // for (let i = 0; i < numWhiteKeys; i++) {
   //   let newKey = createDiv();
   //   newKey.style('position', 'absolute');
   //   newKey.style('height', '200px')
   //   newKey.style('width', '50px')
-  //   newKey.style('left', String(19 + (i*51)) + 'px')
   //   newKey.style('top', '209px')
+  //   newKey.style('left', String(19 + (i*51)) + 'px')
   //   newKey.style('z-index', 1)
   //   keys.push(newKey);
   // }
@@ -50,11 +58,11 @@ function setup() {
   // for (let i = 0; i < numWhiteKeys; i++) {
   //   let newKey = createDiv();
   //   newKey.style('position', 'absolute');
+  //   newKey.style('height', '100px')
+  //   newKey.style('width', '31px')
   //   newKey.style('top', '209px')
   //   newKey.style('left', String(53 + (i*51)) + 'px')
   //   newKey.style('z-index', 2)
-  //   newKey.style('height', '100px')
-  //   newKey.style('width', '31px')
   //   keys.push(newKey);
   // }
   let x = new Key('200px', '50px', '50px', '209px', '1');
@@ -76,5 +84,5 @@ function draw() {
 }
 
 function playSound() {
-  console.log(soundIndex)
+
 }
