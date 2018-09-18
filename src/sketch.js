@@ -43,6 +43,7 @@ function preload() {
 
 function setup() {
   createCanvas(1024, 720);
+  background(60);
 
   let leftPos = 0;
   for (let i = 0; i < sounds.length; i++) {
@@ -79,9 +80,10 @@ function draw() {
     }
 
     textSize(40);
+    fill(random(255));
     text(...currentSound);
-    currentSound[2] += random(15);
-    // playedSounds[i] = currentSound;
+    rotate(PI / 3.0);
+    currentSound[2] += random(10);
   }
 }
 
