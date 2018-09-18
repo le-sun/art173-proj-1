@@ -70,8 +70,8 @@ function draw() {
       rect(45 + (i*51), 200, 30, 100);
     }
   }
+}
 
-  function playSound(soundIndex) {
-    console.log(soundIndex)
-  }
+function playSound(soundIndex) {
+  console.log(soundIndex)
 }
