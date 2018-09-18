@@ -40,7 +40,7 @@ function setup() {
     new Key('200px', '50px', '209px', String(19 + (i*51)) + 'px', 1, i);
 
     if (!(i == 2 || i > numBlackKeys)) {
-      new Key('100px', '31px', '209px', String(53 + (i*51)) + 'px', 2, i + 7);
+      new Key('100px', '31px', '209px', String(53 + (i*51)) + 'px', 2, i + 1);
     }
   }
 }
@@ -62,5 +62,6 @@ function draw() {
 
 function playSound(soundIndex) {
   let sound = sounds[soundIndex];
+  console.log(sound);
   sound.play();
 }
