@@ -68,7 +68,7 @@ function draw() {
 
   for (let i = 0; i < numWhiteKeys; i++) {
     fill('black')
-    if (!(i == 2 || i > numBlackKeys)) {
+    if (!(i === 2 || i > numBlackKeys)) {
       rect(leftPosB + (i*51), 500, 30, 100);
     }
   }
