@@ -49,9 +49,8 @@ function setup() {
     let soundName = sounds[i].file.slice(11, 12);
     new Key('200px', '50px', topPos + 'px', String(leftPosW + (leftPos*51)) + 'px', 1, i, soundName);
 
-    if (i != 4) {
+    if (i != 4 && i != 11) {
       i += 1;
-      console.log(i)
       soundName = sounds[i].file.slice(11, 12);
       new Key('100px', '31px', topPos + 'px', String(leftPosB + (leftPos*51)) + 'px', 2, i, soundName + '#');
     }
